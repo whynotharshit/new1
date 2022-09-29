@@ -1,0 +1,11 @@
+.independent_increased_number-button {
+    background-color: #1e2631;
+    border: 1px solid #1e2631;
+    cursor: pointer;
+    color: #ffff;
+    font-size: 1em;
+    font-weight: 600;
+    padding: 4px 15px;
+    border-radius: 5px;
+    display: inline-block;
+}

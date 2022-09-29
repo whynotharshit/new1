@@ -1,0 +1,86 @@
+Important:
+1) Please provide the websites where you completed with installed Ultimate Membership Pro (UMP) system for my review of your work experience. 
+2) I prefer to deal with developers directly, not "MANAGER" NOR 3rd party sellers.
+3) I'm an experienced developer. I know how to use Wordpress.
+4) Direct Wordpress site - (not cPanel, etc.). You will be provided with WP login credentials after the acceptance.
+5) DO not ask for "budget" as I have seen your prices posted on your profile. Asking me on "what is your budget" will disqualify you automatically (and will not respond to your messages).
+6) This is the 2nd same project I posted after the other Fiverr didn't do the job correctly. You'll understand after you see the website (after you are selected).
+
+======================================================================
+
+    Project Detail:
+    Use my existing development Wordpress site with the existing UMP licensed plugins (already installed by myself). DO NOT INSTALL ANY OTHER PLUGINS WITHOUT MY APPROVAL FIRST.
+
+    - Configure the membership system with membership subscription, etc. that will allow the new paying subscribers to select the membership that will allow them to view the specific blog with parent category (Category1, Category2, Category3) with subcategories under parent category.
+
+    Blog (public)
+    Parent Category 1 and subcategories under parent category 1 (viewable by active members only)
+    Parent Category 2 and subcategories under parent category 2 (viewable by active members only)
+    Parent Category 3 and subcategories under parent category 3 (viewable by active members only)
+
+    Membership Subscription List:
+    Trial (1 week, 1 category)
+    Bronze Package (1 category, monthly)
+    Silver Package (2 categories, monthly)
+    Gold Package (unlimited categories, monthly-yearly)
+    VIP customers (unlimited categories, monthly-yearly)
+    
+    Ultimate Membership Pro has the extended addons that will allow for the restricted posts to be released to public automatically based on scheduled release timeframe (2 weeks). See references below for your review.
+
+    Payment Gateway: 
+    WooCommerce for Coin Remitter crypto payment gateway. Needs to test it to make sure the subscription will work correctly. There's a "test" coin that can be used for testing the subscription signup.
+
+    Important features to be included:
+
+    -- Autopost to email/SMS/Telegram automatically based on user preferences in Account Profile.
+    -- Email, SMS, Telegram, Whatsapp (checkbox to enable/disable, as well as the name/address)
+    -- Parent Category/SubCategory multi-selection
+    -- The recent posts are restricted to members only. The contents are viewable based on the user's profile/settings. 
+
+    The autopost is handled via manual post (media and message). In other words, new post will automatically go out to paid members based on specific categories. If subcategory is selected for that post, it will go out to members based on parent category with assigned subcategories.
+
+    If the new post is published, schedule to select for sending out to paid members: Immediate, 1 hour, daily, weekly (based on settings), as well as the category selection that will go out to specific paid user level members. Immediate after the post is published should be set by default for autopost feature. 
+
+    WE have my own secure SMTP mail server for sending out posts to paid members.
+
+    The posts that are made for paid members will be open to public automatically in 1 week (configurable) - available via Ultimate Membership Pro Restriction Release addon.
+
+    Posts on Announcements, newsletter, etc...will be published and sent to all registered members without restrictions (email, SMS, telegram, whatsapp).
+
+    We will run the tests and tweak the settings together as needed until I'm satisfied with the results. (email, sms, telegram and whatsapp) plus all features/functions. Please test it on your end first..before asking me..to save my time.
+
+    Documentation will need to be written (screenshots would be helpful) on how to deal with the settings, etc.
+
+    I am certain that there are other important features that we may have overlooked..and add it there to make this membership system to be awesome for extra bonus tip. Please let me know if there are any plugins that need to be added to the system.
+
+    This development site is used for development purpose..to make sure that the required features/services are added/installed and tested well.
+
+    I will guide you whatever is necessary to get the system working correctly. Do your research first, as you are an experienced WP developer with UMP experience.
+
+    After this project is completed (before I approved the completion), I will incorporate these features into the "production" website. That is the reason why the documentation is important. This is where I will approve the project after I have no issues with the "production" website integration from my end based on the docmentation provided by you.
+
+    
+    References:
+	=============================
+    Membership Plugin
+    https://ultimatemembershippro.com/pricing/ (paid pro version)
+    https://store.wpindeed.com/addon/ultimate-membershi-pro-bundle/ (paid pro version)
+
+    Standard Addons
+    https://ultimatemembershippro.com/standard-addons/
+
+    Pro Addons
+    https://store.wpindeed.com/addon/category/ultimate-membership-pro/
+
+	Email autopost:
+	https://store.wpindeed.com/addon/mailpoet-v3-integration/
+
+    Telegram Pro (paid licensed)
+    https://wptelegram.pro/features/
+
+    SMS/Whatsapp: (will purchase it)
+    https://codecanyon.net/item/wpnotif-wordpress-sms-whatsapp-notifications/24045791
+    https://wpnotif.unitedover.com/ (Same as above)
+
+    Required for SMS/Whatsapp: (which I will provide - after you have email, sms, telegram working first)
+    https://www.twilio.com/whatsapp/pricing/us

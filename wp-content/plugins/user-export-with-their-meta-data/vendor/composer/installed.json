@@ -1,0 +1,74 @@
+[
+    {
+        "name": "automattic/jetpack-constants",
+        "version": "v1.4.0",
+        "version_normalized": "1.4.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Automattic/jetpack-constants.git",
+            "reference": "b4210d56948529b43785ce31e0055f435eac1f9f"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Automattic/jetpack-constants/zipball/b4210d56948529b43785ce31e0055f435eac1f9f",
+            "reference": "b4210d56948529b43785ce31e0055f435eac1f9f",
+            "shasum": ""
+        },
+        "require-dev": {
+            "php-mock/php-mock": "^2.1",
+            "phpunit/phpunit": "^5.7 || ^6.5 || ^7.5"
+        },
+        "time": "2020-07-01T15:55:35+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "src/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "description": "A wrapper for defining constants in a more testable way."
+    },
+    {
+        "name": "loureirorg/settings-as-woocommerce",
+        "version": "0.0.4",
+        "version_normalized": "0.0.4.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/loureirorg/settings-as-woocommerce.git",
+            "reference": "068a90b1c1b3b9956aa7be4b409632a0f4025b07"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/loureirorg/settings-as-woocommerce/zipball/068a90b1c1b3b9956aa7be4b409632a0f4025b07",
+            "reference": "068a90b1c1b3b9956aa7be4b409632a0f4025b07",
+            "shasum": ""
+        },
+        "require": {
+            "automattic/jetpack-constants": "^1.1"
+        },
+        "time": "2020-05-28T17:05:34+00:00",
+        "type": "package",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "SettingsAsWoocommerce\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "mit"
+        ],
+        "authors": [
+            {
+                "name": "Daniel Loureiro",
+                "email": "loureiro.rg@gmail.com",
+                "homepage": "https://learnwithdaniel.com"
+            }
+        ],
+        "description": "Create WordPress settings pages for your plugin on WooCommerce style."
+    }
+]

@@ -1,0 +1,417 @@
+
+.feedback_kompas_open_button {
+    top: 0;
+    bottom: 0;
+    height: 55px;
+    margin: auto;
+    right: 0;
+    position: fixed;
+    padding: 0px;
+    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 50%);
+    border-radius: 50%;
+    transition: all 0.5s ease 0s;
+}
+.feedback_kompas_cover {
+    top: 0;
+    bottom: 0;
+    height: 120px;
+    margin: auto;
+    right: -350px;
+    position: fixed;
+    z-index: 999;
+    width: 350px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #ED7D31;
+    border-radius: 5px 0px 0px 5px;
+    background-color: #ffffff;
+    text-align: center;
+    transition: all 0.5s ease 0s;
+}
+.modal.active {
+    border-style: solid;
+    border-width: 2px;
+    border-color: #ED7D31;
+}
+.feedback_kompas_open_button.open_button_flipped {
+    right: 350px;
+    background-color: #ffffff;
+    border-radius: 35px 0px 0px 35px;
+    transition: all 0.5s ease 0s;
+}
+.feedback_kompas_open_button.open_button_flipped .feedback_kompas_open_icon_cover {
+    padding: 5px 5px 5px 8px;
+    border-radius: 35px 0px 0px 35px;
+}
+.feedback_kompas_cover.open_flipped {
+    right: 0;
+    box-shadow: 10px 4px 10px 0px rgb(0 0 0 / 50%);
+    transition: all 0.5s ease 0s;
+}
+
+.feedback_kompas_open_icon_cover {
+    cursor: pointer;
+    color: #ffffff;
+    text-decoration: none;
+    background: rgb(237 125 49);
+    display: table;
+    border: none;
+    transition: all 0.5s ease 0s;
+    height: 45px;
+    width: 45px;
+    padding: 5px;
+    border-radius: 50% 0% 50% 50%;
+}
+.feedback_kompas_open_icon {
+    background-image: url(images/customer-satisfaction.png);
+    width: 45px;
+    height: 45px;
+    background-repeat: no-repeat;
+    background-size: 45px 45px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.feedback_kompas {
+    width: 100%;
+    padding: 10px;
+}
+.feedback_kompas_head, .feedback_kompas_body {
+    width: 100%;
+    overflow: hidden;
+}
+.feedback_kompas_company_name {
+    float: left;
+    width: 60%;
+}
+.feedback_kompas_company_feedback_percentage {
+    float: left;
+    width: 40%;
+}
+.feedback_kompas_happy, .feedback_kompas_unhappy {
+    float: left;
+    width: 50%;
+}
+.feedback_kompas_title, .feedback_kompas_company_name {
+    font-size: 15px;
+    font-weight: 600;
+    color: #000000;
+}
+.feedback_kompas_company_feedback_percentage {
+    font-size: 17px;
+    font-weight: 800;
+    color: #000000;
+}
+a.feedback_kompas_company_link {
+    font-size: 18px;
+    font-weight: 800;
+    color: #000000;
+}
+a.feedback_kompas_company_link span {
+    color: #ED7D31;
+}
+.feedback_kompas_happy_icon {
+    background-image: url(images/smile.png);
+}
+.feedback_kompas_unhappy_icon {
+    background-image: url(images/sad.png);
+}
+.feedback_kompas_happy_icon, .feedback_kompas_unhappy_icon {
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+
+/**
+ * Overlay
+ * -- only show for tablet and up
+ */
+ @media only screen and (min-width: 40em) {
+    .modal-overlay {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 9999;
+      background-color: rgba(0, 0, 0, 0.6);
+      opacity: 0;
+      visibility: hidden;
+      -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
+      -webkit-transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+      transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+    }
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  /**
+   * Modal
+   */
+  .modal {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative;
+    margin: 0 auto;
+    background-color: #fff;
+    max-width: 500px;
+    max-height: 450px;
+    padding: 1rem;
+    border-radius: 3px;
+    opacity: 0;
+    overflow-y: auto;
+    visibility: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+    transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  }
+  .modal .close-modal {
+    position: absolute;
+    cursor: pointer;
+    top: 5px;
+    right: 15px;
+    opacity: 0;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    -webkit-transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), -webkit-transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+    transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), -webkit-transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+    transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+    transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1), -webkit-transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+    -webkit-transition-delay: 0.3s;
+            transition-delay: 0.3s;
+  }
+  .modal .close-modal svg {
+    width: 1.75em;
+    height: 1.75em;
+  }
+  .modal .modal-content {
+    opacity: 0;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    -webkit-transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+    transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+    -webkit-transition-delay: 0.3s;
+            transition-delay: 0.3s;
+  }
+  .modal.active {
+    visibility: visible;
+    opacity: 1;
+    z-index: 9999;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  .modal.active .modal-content {
+    opacity: 1;
+  }
+  .modal.active .close-modal {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+    opacity: 1;
+    z-index: 9999999 !important;
+  }
+  
+  /**
+   * Mobile styling
+   */
+  @media only screen and (max-width: 39.9375em) {
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    .modal {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+      width: 100%;
+      height: 100%;
+      -webkit-overflow-scrolling: touch;
+      border-radius: 0;
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1);
+      padding: 0 !important;
+    }
+  
+    .close-modal {
+      right: 20px !important;
+    }
+  }
+  /* pop-up end */
+  .modal-content {
+    padding: 20px;
+  }
+  /* modal css */
+
+.feedback_kompas_massage_happy_icon {
+    background-image: url(images/smile.png);
+}
+.feedback_kompas_massage_unhappy_icon {
+    background-image: url(images/sad.png);
+}
+.feedback_kompas_massage_happy_icon, .feedback_kompas_massage_unhappy_icon {
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    cursor: pointer;
+}
+
+.feedback_kompas_massage_icon_list {
+    width: 100%;
+    overflow: hidden;
+}
+.feedback_kompas_massage_trustpilot_icon {
+    background-image: url(images/trustpilot.png);
+}
+.feedback_kompas_massage_facbook_icon {
+    background-image: url(images/facebook.png);
+}
+.feedback_kompas_massage_google_icon {
+    background-image: url(images/google.png);
+}
+.feedback_kompas_massage_trustpilot_icon, .feedback_kompas_massage_facbook_icon, .feedback_kompas_massage_google_icon {
+    width: 33.3%;
+    height: 35px;
+    background-repeat: no-repeat;
+    background-size: 120px 35px;
+    cursor: pointer;
+    float: left;
+    margin-top: 20px;
+}
+input#feedback_kompas_email {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 46px;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow-wrap: normal;
+    background: #ffffff;
+    appearance: none;
+    border: 1px solid #003B8E !important;
+    border-radius: 10px 10px 10px 10px !important;
+    padding: 5px 14px !important;
+    margin: 10px 0px;
+}
+input#feedback_kompas_email:focus-visible, textarea.feedback_kompas_Message_textarea {
+    border: 1px solid #ED7D31 !important;
+}
+textarea.feedback_kompas_Message_textarea {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 46px;
+    padding: 10px 14px;
+    color: rgb(26, 26, 26);
+    font-size: 16px;
+    line-height: 1.5;
+    overflow-wrap: normal;
+    background: #ffffff;
+    border-radius: 10px 10px 10px 10px !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid #003B8E !important;
+    resize: vertical;
+}
+
+input.feedback_kompas_submit-btn {
+    cursor: pointer;
+    background-color: #003B8E !important;
+    border-color: #003B8E !important;
+    color: #FFFFFF !important;
+    border-radius: 10px 10px 10px 10px !important;
+    font-weight: 400 !important;
+    width: 100% !important;
+    height: auto !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    word-wrap: break-word !important;
+    padding: 12px 10px !important;
+    line-height: 1.2 !important;
+    font-size: 1rem!important;
+    display: block !important;
+    margin: 0 auto !important;
+    margin-top: 10px !important;
+}
+input.feedback_kompas_submit-btn:hover {
+    background-color: #ED7D31 !important;
+    border-color: #ED7D31 !important;
+    color: #ffffff !important;
+    transition: all 0.5s ease 0s;
+}
+.feedback_kompas_massage_text span {
+    background-image: url(images/smile_sm.png);
+    width: 45px;
+    height: 45px;
+    background-repeat: no-repeat;
+    background-size: 45px 45px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.feedback_kompas_loder {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: none;
+    opacity: 1;
+    background-color: rgb(176 188 235 / 17%);
+    z-index: 999;
+    padding: 20px;
+}
+.progress-bar {
+    float: left;
+    width: 0;
+    height: 100%;
+    font-size: 12px;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+    background-color: #ed7d31;
+    -webkit-box-shadow: inset 0 -1px 0 rgba(37, 35, 35, 0.15);
+            box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+    -webkit-transition: width .6s ease;
+         -o-transition: width .6s ease;
+            transition: width .6s ease;
+}
+.progress {
+    height: 20px;
+    margin: 6px 0px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+}
+div.uploadStatus p {
+    margin-bottom: -15px;
+}

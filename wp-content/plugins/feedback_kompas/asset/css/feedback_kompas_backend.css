@@ -1,0 +1,103 @@
+.feedback_kompas-submenu {
+    margin: 50px;
+}
+table.feedback_kompas-data-table th {
+    width: 20%;
+}
+.feedback_kompas-submenu-title h1, .feedback_kompas-menu-title h1 {
+    color: #707070;
+    font-size: 1.8rem;
+    margin-bottom: 50px;
+    margin-left: 70px;
+}
+.feedback_kompas-submenu-title, .feedback_kompas-menu-title {
+    float: left;
+}
+.feedback_kompas-title-csv {
+    width: 100%;
+    overflow: hidden;
+}
+.feedback_kompas {
+    width: 100%;
+    position: relative;
+    border: 1px solid #e5e5e5;
+    box-shadow: 4px 5px 10px 8px rgba(0,0,0,.04);
+    background: #fff;
+    box-sizing: border-box;
+}
+.feedback_kompas-data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table.feedback_kompas-data-table .text-left {
+    text-align: left;
+}
+table.feedback_kompas-data-table td, th {
+    padding: 10px;
+}
+
+.feedback_kompas-submenu-title h1:before {
+    cursor: pointer;
+    content: '';
+    background-image: url(images/filter-64.png);
+    background-repeat: no-repeat;
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    margin-top: -22px;
+    margin-left: -68px;
+}
+
+.feedback_kompas .tab {
+    overflow: hidden;
+    border: 1px solid #1a1a96;
+    background-color: #1a1a96;
+}
+.feedback_kompas .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    color: #fff;
+}
+.feedback_kompas .tab button.active {
+    background-color: #0000001f;
+}
+.feedback_kompas .tabcontent {
+    display: none;
+    padding: 20px 25px;
+    border: 1px solid #1a1a96;
+}
+
+input.feedback_kompas-submit-btn {
+    cursor: pointer;
+    color: #fff !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #675E60;
+    padding: 8px 25px;
+    font-size: 15px;
+    font-weight: 400;
+    border-radius: 10px;
+    display: inline-block;
+    border: none;
+    transition: all 0.4s ease 0s;
+    box-shadow: 3px 3px 5px grey;
+    margin-right: 10px;
+}
+input.feedback_kompas-submit-btn:hover {
+    background-color: #1a1a96;
+}
+input.feedback_kompas_receive_mail {
+    padding: 6px 8px;
+    font-size: 1.2em;
+    line-height: 100%;
+    height: 2.4em;
+    width: 100%;
+    background-color: #f8fafb;
+    border-radius: 10px;
+}

@@ -1,0 +1,2096 @@
+.vgen-challenge-submenu {
+
+    margin: 50px;
+
+}
+
+.vgen-challenge-submenu-title h1, .vgen-challenge-submenu-analytics-title h1 {
+
+    color: #707070;
+
+    font-size: 1.8rem;
+
+    margin-bottom: 50px;
+
+    margin-left: 70px;
+
+}
+
+.vgen-challenge-submenu-title, .vgen-challenge-submenu-analytics-title {
+
+    float: left;
+
+}
+
+.vgen-challenge-title-csv {
+
+    width: 100%;
+
+    overflow: hidden;
+
+}
+
+.vgen-challenge {
+
+    width: 100%;
+
+    position: relative;
+
+    border: 1px solid #e5e5e5;
+
+    box-shadow: 4px 5px 10px 8px rgba(0,0,0,.04);
+
+    background: #fff;
+
+    box-sizing: border-box;
+
+}
+
+.vgen-challenge-data-table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+}
+
+table.vgen-challenge-data-table .text-left {
+
+    text-align: left;
+
+}
+
+table.vgen-challenge-data-table td, th {
+
+    padding: 10px;
+
+}
+
+
+
+.vgen-challenge-submenu-title h1:before {
+
+    cursor: pointer;
+
+    content: '';
+
+    background-image: url(images/settings.png);
+
+    background-repeat: no-repeat;
+
+    width: 64px;
+
+    height: 64px;
+
+    position: absolute;
+
+    margin-top: -22px;
+
+    margin-left: -68px;
+
+}
+
+.vgen-challenge-submenu-analytics-title h1:before {
+
+    cursor: pointer;
+
+    content: '';
+
+    background-image: url(images/analytics.png);
+
+    background-repeat: no-repeat;
+
+    width: 64px;
+
+    height: 64px;
+
+    position: absolute;
+
+    margin-top: -28px;
+
+    margin-left: -70px;
+
+}
+
+
+
+.vgen-challenge .tab {
+
+    overflow: hidden;
+
+    border: 1px solid #1a1a96;
+
+    background-color: #1a1a96;
+
+}
+
+.vgen-challenge .tab button {
+
+    background-color: inherit;
+
+    float: left;
+
+    border: none;
+
+    outline: none;
+
+    cursor: pointer;
+
+    padding: 14px 16px;
+
+    transition: 0.3s;
+
+    font-size: 17px;
+
+    color: #fff;
+
+}
+
+.vgen-challenge .tab button.active {
+
+    background-color: #0000001f;
+
+}
+
+.vgen-challenge .tabcontent {
+
+    display: none;
+
+    padding: 20px 25px;
+
+    border: 1px solid #1a1a96;
+
+    border-top: none;
+
+}
+
+
+
+input.vgen_challenge-submit-btn {
+
+    cursor: pointer;
+
+    color: #fff !important;
+
+    text-transform: uppercase;
+
+    text-decoration: none;
+
+    background: #675E60;
+
+    padding: 8px 25px;
+
+    font-size: 15px;
+
+    font-weight: 400;
+
+    border-radius: 10px;
+
+    display: inline-block;
+
+    border: none;
+
+    transition: all 0.4s ease 0s;
+
+    box-shadow: 3px 3px 5px grey;
+
+    margin-right: 10px;
+
+}
+
+input.vgen_challenge-submit-btn:hover {
+
+    background-color: #1a1a96;
+
+}
+
+.form-control {
+
+    padding: 6px 8px;
+
+    font-size: 1.2em;
+
+    line-height: 100%;
+
+    height: 2.4em !important;
+
+    width: 100% !important;
+
+    max-width: 100% !important;
+
+    background-color: #f8fafb !important;
+
+    border-radius: unset !important;
+
+}
+
+input.vgen_challenge-color-style {
+
+    width: 50px;
+
+    height: 50px;
+
+    cursor: pointer;
+
+}
+
+#challenge_subscribe_and_participation_rate_par_challenge, .challenge_subscribe_and_participation_rate_par_challenge, .challenge_top_10_users, .challenge_particular_and_unique_page_views_par_challenge, .challenge_time_on_that_page_par_challenge {
+
+  width: 100%;
+
+  height: 400px;
+
+}
+
+#challenge_subscribe_and_participation_rate, div#active_challenge_subscribe_and_participation_rate, #chartdiv {
+
+  width: 100%;
+
+  height: 450px;
+
+}
+
+.analytics-cover {
+
+  width: 100%;
+
+  overflow: hidden;
+
+}
+
+.challenge-subscribe-and-participation-rate-cover {
+
+  float: left;
+
+  width: 50%;
+
+  padding: 20px;
+
+  border: 1px solid #fff;
+
+  box-shadow: 2px 3px #e4e4e4;
+
+  margin-bottom: 20px;
+
+}
+
+.challenge-subscribe-and-participation-rate-cover-all {
+
+  width: 100%;
+
+  padding: 20px;
+
+  float: left;
+
+}
+
+.table-responsive {
+
+  width: 100%;
+
+}
+
+.challenge-subscribe-and-participation-rate-cover h2, .challenge-subscribe-and-participation-rate-cover-all h2 {
+
+  text-align: center;
+
+  margin-bottom: 30px;
+
+  color: #707070;
+
+  font-size: 1.2rem;
+
+}
+
+.challenge-subscribe-and-participation-rate-cover-header {
+
+  width: 100%;
+
+  overflow: hidden;
+
+}
+
+
+
+
+
+/*checkbox css start*/
+
+
+
+input.checkbox__toggle {
+
+    display: none;
+
+}
+
+
+
+.ext-cross:before, .checkbox__checker:before, .checkbox__cross:before, .checkbox__ok:before, .ext-cross:after, .checkbox__checker:after, .checkbox__cross:after, .checkbox__ok:after {
+
+  content: "";
+
+  display: block;
+
+  position: absolute;
+
+  width: 14px;
+
+  height: 2px;
+
+  margin: 0 auto;
+
+  top: 20px;
+
+  left: 0;
+
+  right: 0;
+
+  background-color: #bf1e1e;
+
+  border-radius: 5px;
+
+  -webkit-transition-duration: .3s;
+
+          transition-duration: .3s;
+
+}
+
+.ext-cross:before, .checkbox__checker:before, .checkbox__cross:before, .checkbox__ok:before {
+
+  -webkit-transform: rotateZ(45deg);
+
+          transform: rotateZ(45deg);
+
+}
+
+.ext-cross:after, .checkbox__checker:after, .checkbox__cross:after, .checkbox__ok:after {
+
+  -webkit-transform: rotateZ(-45deg);
+
+          transform: rotateZ(-45deg);
+
+}
+
+
+
+.ext-ok:before, .checkbox__toggle:checked + .checkbox__checker:before, .checkbox__ok:before, .ext-ok:after, .checkbox__toggle:checked + .checkbox__checker:after, .checkbox__ok:after {
+
+  background-color: #0cb018;
+
+}
+
+.ext-ok:before, .checkbox__toggle:checked + .checkbox__checker:before, .checkbox__ok:before {
+
+  width: 6px;
+
+  top: 23px;
+
+  left: -7px;
+
+}
+
+.ext-ok:after, .checkbox__toggle:checked + .checkbox__checker:after, .checkbox__ok:after {
+
+  width: 12px;
+
+  left: 5px;
+
+}
+
+
+
+.checkbox {
+
+  width: 100px;
+
+  margin: 10px 0px 10px 10px;
+
+}
+
+.checkbox__container {
+
+  display: block;
+
+  position: relative;
+
+  height: 42px;
+
+  cursor: pointer;
+
+}
+
+.checkbox__toggle {
+
+  display: none;
+
+}
+
+.checkbox__toggle:checked + .checkbox__checker {
+
+  left: calc(100% - 43px);
+
+  -webkit-transform: rotateZ(360deg);
+
+          transform: rotateZ(360deg);
+
+}
+
+.checkbox__checker, .checkbox__cross, .checkbox__ok {
+
+  display: block;
+
+  position: absolute;
+
+  height: 43px;
+
+  width: 43px;
+
+  top: -1px;
+
+  left: 0px;
+
+  z-index: 1;
+
+}
+
+.checkbox__checker {
+
+  border-radius: 50%;
+
+  background-color: #fff;
+
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5);
+
+  -webkit-transition: .3s;
+
+  transition: .3s;
+
+  z-index: 2;
+
+}
+
+.checkbox__checker:before, .checkbox__checker:after {
+
+  -webkit-transition-duration: .3s;
+
+          transition-duration: .3s;
+
+}
+
+.checkbox__cross:before, .checkbox__cross:after, .checkbox__ok:before, .checkbox__ok:after {
+
+  background-color: #ddd;
+
+}
+
+.checkbox__ok {
+
+  left: calc(100% - 43px);
+
+}
+
+.checkbox__txt-left, .checkbox__txt-right {
+
+  display: block;
+
+  position: absolute;
+
+  width: 42px;
+
+  top: 12px;
+
+  text-align: center;
+
+  color: #fff;
+
+  font-size: 12px;
+
+  z-index: 1;
+
+}
+
+.checkbox__txt-right {
+
+  right: 0px;
+
+}
+
+.checkbox__bg {
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  fill: #aaa;
+
+  width: 100%;
+
+  height: 100%;
+
+}
+
+
+
+/*checkbox css end*/
+
+
+
+table.vgen_challenge-table {
+
+	width: 100%;
+
+	border-collapse: collapse;
+
+}
+
+tr.vgen_challenge-heading-wrapper th, tr.tr-vgen-user-marks td {
+
+    color: #878787 !important;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    border-bottom: 2px solid #f1f1f1 !important;
+
+}
+
+table.vgen_challenge-table td, th {
+
+    text-align: center;
+
+    padding: 10px;
+
+    vertical-align: inherit;
+
+}
+
+table.vgen_challenge-table th {
+
+    padding-bottom: 20px;
+
+}
+
+.table {
+
+  width: 100%;
+
+  margin-bottom: 1rem;
+
+  color: #212529;
+
+}
+
+.table td, .table th {
+
+  padding: .75rem;
+
+  vertical-align: middle !important;
+
+  border-top: 1px solid #dee2e6;
+
+}
+
+.table thead th {
+
+  vertical-align: bottom;
+
+  border-bottom: 2px solid #dee2e6;
+
+}
+
+.np-edit, button.np-update {
+
+  background-color: inherit;
+
+  border: none;
+
+  outline: none;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  color: #04B89B;
+
+  margin: 0 auto;
+
+}
+
+button.np-update {
+
+  color: #EE083D;
+
+}
+
+.np-update-div {
+
+    display: none;
+
+}
+
+input.vc_add_marks {
+
+  width: 200px;
+
+}
+
+.tabcontent.vgen-challenge-marking-system {
+
+  border-top: 1px solid #1a1a96;
+
+}
+
+.challenge-name, .challenge-author-name {
+
+  margin-right: 10px;
+
+}
+
+.challenge-name span, .challenge-author-name span {
+
+  color: #f44336;
+
+}
+
+.challenge-except-user-name span, .challenge-except-time span {
+
+  color: #009688;
+
+}
+
+
+
+
+
+/**
+
+ * Overlay
+
+ * -- only show for tablet and up
+
+ */
+
+ @media only screen and (min-width: 40em) {
+
+  .modal-overlay {
+
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
+    display: flex;
+
+    -webkit-box-align: center;
+
+        -ms-flex-align: center;
+
+            align-items: center;
+
+    -webkit-box-pack: center;
+
+        -ms-flex-pack: center;
+
+            justify-content: center;
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    z-index: 5;
+
+    background-color: rgba(0, 0, 0, 0.6);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    -webkit-backface-visibility: hidden;
+
+            backface-visibility: hidden;
+
+    -webkit-transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+
+    transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+
+  }
+
+  .modal-overlay.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+  }
+
+}
+
+/**
+
+ * Modal
+
+ */
+
+.modal {
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+
+  -webkit-box-align: center;
+
+      -ms-flex-align: center;
+
+          align-items: center;
+
+  -webkit-box-pack: center;
+
+      -ms-flex-pack: center;
+
+          justify-content: center;
+
+  position: relative;
+
+  margin: 0 auto;
+
+  background-color: #fff;
+
+  width: 500px;
+
+  max-height: 450px;
+
+  padding: 1rem;
+
+  border-radius: 3px;
+
+  opacity: 0;
+
+  overflow-y: auto;
+
+  visibility: hidden;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+  -webkit-backface-visibility: hidden;
+
+          backface-visibility: hidden;
+
+  -webkit-transform: scale(1.2);
+
+          transform: scale(1.2);
+
+  -webkit-transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+
+  transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+
+}
+
+.modal .close-modal {
+
+  position: absolute;
+
+  cursor: pointer;
+
+  top: 5px;
+
+  right: 10px;
+
+  opacity: 0;
+
+  -webkit-backface-visibility: hidden;
+
+          backface-visibility: hidden;
+
+  -webkit-transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), -webkit-transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+
+  transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), -webkit-transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+
+  transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+
+  transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1), -webkit-transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+
+  -webkit-transition-delay: 0.3s;
+
+          transition-delay: 0.3s;
+
+}
+
+.modal .close-modal svg {
+
+  width: 1.75em;
+
+  height: 1.75em;
+
+}
+
+.modal .modal-content {
+
+  opacity: 0;
+
+  -webkit-backface-visibility: hidden;
+
+          backface-visibility: hidden;
+
+  -webkit-transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+
+  transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+
+  -webkit-transition-delay: 0.3s;
+
+          transition-delay: 0.3s;
+
+}
+
+.modal.active {
+
+  visibility: visible;
+
+  opacity: 1;
+
+  -webkit-transform: scale(1);
+
+          transform: scale(1);
+
+}
+
+.modal.active .modal-content {
+
+  opacity: 1;
+
+}
+
+.modal.active .close-modal {
+
+  -webkit-transform: translateY(10px);
+
+          transform: translateY(10px);
+
+  opacity: 1;
+
+  z-index: 9999;
+
+}
+
+
+
+/**
+
+ * Mobile styling
+
+ */
+
+@media only screen and (max-width: 39.9375em) {
+
+  h1 {
+
+    font-size: 1.5rem;
+
+  }
+
+
+
+  .modal {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    -webkit-overflow-scrolling: touch;
+
+    border-radius: 0;
+
+    -webkit-transform: scale(1.1);
+
+            transform: scale(1.1);
+
+    padding: 0 !important;
+
+  }
+
+
+
+  .close-modal {
+
+    right: 20px !important;
+
+  }
+
+}
+
+/* pop-up end */
+
+.modal-content {
+
+  padding: 20px;
+
+}
+
+.add_marks_page input[type=text] {
+
+  width: 100%;
+
+  padding: 12px;
+
+  border: 1px solid #ccc;
+
+  border-radius: 4px;
+
+  box-sizing: border-box;
+
+  margin-top: 6px;
+
+  margin-bottom: 16px;
+
+  resize: vertical;
+
+}
+
+
+
+button.add_marks, .update-marks {
+
+  cursor: pointer;
+
+  color: #fff !important;
+
+  text-transform: uppercase;
+
+  text-decoration: none;
+
+  background: #675E60;
+
+  padding: 8px 22px;
+
+  font-size: 15px;
+
+  font-weight: 400;
+
+  border-radius: 15px;
+
+  display: inline-block;
+
+  border: none;
+
+  transition: all 0.4s ease 0s;
+
+  box-shadow: 3px 3px 5px grey;
+
+}
+
+/* modal css */
+
+
+
+.vc_add_marks_cover {
+
+  margin-top: 20px;
+
+}
+
+
+
+.vc_marking_update-loder-loder {
+
+  position: absolute;
+
+  text-align: center;
+
+  width: 100%;
+
+  height: 100%;
+
+  display: none;
+
+  opacity: 1;
+
+  background-color: rgb(244 243 255 / 19%);
+
+  z-index: 999;
+
+  margin-left: -15px;
+
+}
+
+.vc_marking_update-loder-gif {
+
+  vertical-align: middle;
+
+  display: table;
+
+  height: 100%;
+
+  width: 100%;
+
+}
+
+.gifInnter {
+
+  display: table-cell;
+
+  vertical-align: middle;
+
+}
+
+
+
+
+
+/* vc-cboxtags start css */
+
+ul.vc-cboxtags {
+
+  list-style: none;
+
+  /* padding: 20px; */
+
+}
+
+ul.vc-cboxtags li{
+
+display: inline;
+
+}
+
+ul.vc-cboxtags li label{
+
+  display: inline-block;
+
+  background-color: rgba(255, 255, 255, .9);
+
+  border: 2px solid rgba(139, 139, 139, .3);
+
+  color: #adadad;
+
+  border-radius: 25px;
+
+  white-space: nowrap;
+
+  margin: 3px 0px;
+
+  -webkit-touch-callout: none;
+
+  -webkit-user-select: none;
+
+  -moz-user-select: none;
+
+  -ms-user-select: none;
+
+  user-select: none;
+
+  -webkit-tap-highlight-color: transparent;
+
+  transition: all .2s;
+
+}
+
+
+
+ul.vc-cboxtags li label {
+
+  padding: 8px 12px;
+
+  cursor: pointer;
+
+}
+
+
+
+ul.vc-cboxtags li label::before {
+
+  display: inline-block;
+
+  font-style: normal;
+
+  font-variant: normal;
+
+  text-rendering: auto;
+
+  -webkit-font-smoothing: antialiased;
+
+  font-family: "Font Awesome 5 Free";
+
+  font-weight: 900;
+
+  font-size: 12px;
+
+  padding: 2px 6px 2px 2px;
+
+  content: "\f067";
+
+  transition: transform .3s ease-in-out;
+
+}
+
+
+
+ul.vc-cboxtags li input[type="checkbox"]:checked + label::before {
+
+  content: "\f00c";
+
+  transform: rotate(-360deg);
+
+  transition: transform .3s ease-in-out;
+
+}
+
+
+
+ul.vc-cboxtags li input[type="checkbox"]:checked + label {
+
+  border: 2px solid #1bdbf8;
+
+  background-color: #12bbd4;
+
+  color: #fff;
+
+  transition: all .2s;
+
+}
+
+
+
+ul.vc-cboxtags li input[type="checkbox"] {
+
+display: absolute;
+
+}
+
+ul.vc-cboxtags li input[type="checkbox"] {
+
+position: absolute;
+
+opacity: 0;
+
+}
+
+ul.vc-cboxtags li input[type="checkbox"]:focus + label {
+
+border: 2px solid #e9a1ff;
+
+}
+
+.wssn-hidden{
+
+  display: none;
+
+}
+
+/* vc-cboxtags end css */
+
+
+
+
+
+.challenge-submit-id span {
+
+  color: #0003ee;
+
+  font-weight: 600;
+
+  font-size: 20px;
+
+}
+
+.mail-to-update-content {
+
+  text-align: center;
+
+}
+
+.vagn-go-back {
+
+  margin-top: 20px;
+
+  font-size: 15px;
+
+  font-weight: 400;
+
+}
+
+.update-marks {
+
+  margin-top: 10px;
+
+}
+
+textarea.form-control-css {
+
+  padding: 6px 8px;
+
+  font-size: 1.2em;
+
+  line-height: 100%;
+
+  height: 200px;
+
+  width: 100% !important;
+
+  max-width: 100% !important;
+
+  background-color: #f8fafb !important;
+
+  border-radius: unset !important;
+
+}
+
+.vgen_challenge-data-admin-icon h1:after {
+
+  cursor: pointer;
+
+  content: '';
+
+  background-image: url(images/csv.png);
+
+  background-repeat: no-repeat;
+
+  width: 64px;
+
+  height: 64px;
+
+  position: absolute;
+
+  margin-top: -24px;
+
+  margin-left: 8px;
+
+}
+
+h1#vgen_challenge_data_export {
+
+  color: #707070;
+
+  cursor: pointer;
+
+  font-size: 17px;
+
+}
+
+.vgen_challenge-data-admin-icon {
+
+  float: right;
+
+  margin: 36px 64px;
+
+}
+
+.modal.modal-download-challenge.active {
+
+  width: 700px;
+
+  max-height: 500px;
+
+}
+
+.modal-content.modal-content-download-challenge {
+
+  width: 100%;
+
+  height: 80%;
+
+  overflow: hidden;
+
+  top: -5px;
+
+}
+
+.download-challenge-user-subscriptions-and-participation-button-cover {
+
+  width: 100%;
+
+  overflow: hidden;
+
+}
+
+h1#challenge_subscriptions_button {
+
+  cursor: pointer;
+
+  display: block;
+
+  float: left;
+
+  margin: 2px 2px 2px 0;
+
+  color: #fff !important;
+
+  fill: #FFFFFF;
+
+  background-color: #3257ED;
+
+  border-radius: 50px 0px 50px 50px;
+
+  box-shadow: 5px 2px 20px 5px rgb(0 0 0 / 10%);
+
+  font-size: 16px;
+
+  font-weight: 400;
+
+  font-family: Dejavusans;
+
+  margin: 36px 0px;
+
+  border: 1px solid #dfe0e2;
+
+  padding: 8px 28px 8px 30px;
+
+  text-align: center;
+
+  cursor: pointer;
+
+}
+
+h1#challenge_subscriptions_button:hover, .h1#challenge_subscriptions_button:focus {
+
+  color: #BD1045 !important;
+
+  background-color: #FFFFFF !important;
+
+}
+
+.vgen_challenge-data-andsubscriptions-cover {
+
+  width: 100%;
+
+  overflow: hidden;
+
+}
+
+.vgen_challenge-data-andsubscriptions {
+
+  float: left;
+
+  width: 50%;
+
+}
+
+label.vgen_challenge_subscriptions_label {
+
+  display: block;
+
+  font-weight: 700;
+
+  font-size: 15px;
+
+  float: none;
+
+  line-height: 1.3;
+
+  margin-bottom: 10px;
+
+  margin-top: 20px;
+
+}
+
+input#vgen_challenge_checkbox_subscription_title {
+
+  width: 100%;
+
+  color: #666;
+
+  padding: 5px;
+
+  height: auto;
+
+  border-width: 1px;
+
+  border-style: solid;
+
+  border-color: #eaeaea;
+
+  border-radius: 2px;
+
+  background: #fafafa;
+
+  box-shadow: none;
+
+  box-sizing: border-box;
+
+  transition: all .2s linear;
+
+}
+
+.user_subscriptions_mail_cover, .vgen_challenge_mail_sending_status_cover {
+
+  max-height: 220px;
+
+  overflow-y: scroll;
+
+  overflow-x: hidden;
+
+}
+
+.user_subscriptions_mail_cover ul.vc-cboxtags, .vgen_challenge_mail_sending_status_cover ul.vgen_challenge_mail_sending_status_error_ul {
+
+  padding: 0px !important;
+
+}
+
+.progress-bar {
+
+  float: left;
+
+  width: 0;
+
+  height: 100%;
+
+  font-size: 12px;
+
+  line-height: 20px;
+
+  color: #fff;
+
+  text-align: center;
+
+  background-color: #337ab7;
+
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+
+          box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+
+  -webkit-transition: width .6s ease;
+
+       -o-transition: width .6s ease;
+
+          transition: width .6s ease;
+
+}
+
+.progress {
+
+  height: 20px;
+
+  margin-bottom: 20px;
+
+  overflow: hidden;
+
+  background-color: #f5f5f5;
+
+  border-radius: 4px;
+
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+
+          box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+
+}
+
+.vgen_challenge_filter-loder {
+
+  position: absolute;
+
+  text-align: center;
+
+  width: 100%;
+
+  height: 100%;
+
+  display: none;
+
+  opacity: 1;
+
+  background-color: rgb(176 235 229 / 17%);
+
+  z-index: 99999;
+
+  padding: 20px;
+
+}
+
+.vgen_challenge_filter-gif {
+
+  vertical-align: middle;
+
+  display: table;
+
+  height: 100%;
+
+  width: 100%;
+
+}
+
+.gifInnter {
+
+  display: table-cell;
+
+  vertical-align: middle;
+
+}
+
+
+
+/* .modal.modal-download-challenge.active .close-modal {
+
+  float: left;
+
+  top: -5px;
+
+  z-index: 999;
+
+} */
+
+.modal-download-challenge-cover {
+
+  width: 640px;
+
+  margin-top: 60px;
+
+  max-height: 285px;
+
+  position: fixed;
+
+  overflow-y: scroll;
+
+  overflow-x: hidden;
+
+  z-index: 999;
+
+  padding: 10px;
+
+}
+
+.modal-download-challenge-cover.for-user-mail-send-cover {
+
+  margin-top: -15px !important;
+
+  max-height: 360px !important;
+
+}
+
+a.close-modal.close-modal-download-challenge {
+
+  z-index: 999;
+
+  top: 10px;
+
+  right: 20px;
+
+}
+
+.modal-content-title {
+
+  -webkit-transform: translateY(10px);
+
+  transform: translateY(10px);
+
+  opacity: 1;
+
+  z-index: 999;
+
+  top: 0px;
+
+  left: 15px;
+
+  position: absolute;
+
+  cursor: pointer;
+
+}
+
+.modal-content-title p {
+
+  font-size: 20px;
+
+  padding: 10px 20px;
+
+}
+
+.modal-download-challenge-vc-ac-cb-div ul.vc-cboxtags li label {
+
+  padding: 5px 8px;
+
+  cursor: pointer;
+
+}
+
+.challenge-download-button, .challenge-send-mail-button, .challenge-download-user-email-button {
+
+  cursor: pointer;
+
+  color: #fff !important;
+
+  text-transform: uppercase;
+
+  text-decoration: none;
+
+  background: #675E60;
+
+  padding: 8px 25px;
+
+  font-size: 15px;
+
+  font-weight: 400;
+
+  border-radius: 10px;
+
+  display: inline-block;
+
+  border: none;
+
+  transition: all 0.4s ease 0s;
+
+  box-shadow: 3px 3px 5px grey;
+
+  margin-right: 10px;
+
+  margin-top: 10px;
+
+}
+
+.challenge-download-cover {
+
+  -webkit-transform: translateY(10px);
+
+  transform: translateY(10px);
+
+  opacity: 1;
+
+  z-index: 999;
+
+  bottom: 35px;
+
+  right: 15px;
+
+  position: absolute;
+
+  cursor: pointer;
+
+}
+
+.challenge-active-or-deactive {
+
+  width: 15px;
+
+  height: 15px;
+
+  border-radius: 50%;
+
+  background-size: cover;
+
+  background-color: #f00;
+
+  margin-top: 3px;
+
+  margin-right: 5px;
+
+}
+
+.challenge-active-or-deactive.active {
+
+  background-color: #4aa74d;
+
+}
+
+.challenge-active-or-deactive.coming-soon {
+
+  background-color: #2196f3;
+
+}
+
+
+
+.challenge_particular_and_unique_page_views_cover, .challenge_average_and_time_on_that_page_cover {
+
+  margin-top: 20px;
+
+  overflow: hidden;
+
+  float: left;
+
+}
+
+.challenge_particular_page_views, .challenge_unique_page_views, .challenge_time_on_that_page_views, .challenge_average_time_on_that_page_views, .challenge_total_subscriptions, .challenge_total_participation {
+
+  float: left;
+
+  margin-left: 35px;
+
+  margin-right: 5px;
+
+}
+
+.challenge_particular_page_views p:before {
+
+  cursor: pointer;
+
+  content: '';
+
+  background-image: url(images/particular_page_views.png);
+
+  background-repeat: no-repeat;
+
+  width: 24px;
+
+  height: 24px;
+
+  position: absolute;
+
+  margin-top: -2px;
+
+  margin-left: -30px;
+
+}
+
+.challenge_unique_page_views p:before {
+
+  cursor: pointer;
+
+  content: '';
+
+  background-image: url(images/unique_page_views.png);
+
+  background-repeat: no-repeat;
+
+  width: 24px;
+
+  height: 24px;
+
+  position: absolute;
+
+  margin-top: -2px;
+
+  margin-left: -30px;
+
+}
+
+.challenge_time_on_that_page_views p:before {
+
+  cursor: pointer;
+
+  content: '';
+
+  background-image: url(images/time_on_that_page.png);
+
+  background-repeat: no-repeat;
+
+  width: 24px;
+
+  height: 24px;
+
+  position: absolute;
+
+  margin-top: -2px;
+
+  margin-left: -30px;
+
+}
+
+.challenge_average_time_on_that_page_views p:before {
+
+  cursor: pointer;
+
+  content: '';
+
+  background-image: url(images/average_time_on_that_page.png);
+
+  background-repeat: no-repeat;
+
+  width: 24px;
+
+  height: 24px;
+
+  position: absolute;
+
+  margin-top: -2px;
+
+  margin-left: -30px;
+
+}
+
+.challenge_total_subscriptions p:before {
+
+  cursor: pointer;
+
+  content: '';
+
+  background-image: url(images/subscription.png);
+
+  background-repeat: no-repeat;
+
+  width: 24px;
+
+  height: 24px;
+
+  position: absolute;
+
+  margin-top: -2px;
+
+  margin-left: -30px;
+
+}
+
+.challenge_total_participation p:before {
+
+  cursor: pointer;
+
+  content: '';
+
+  background-image: url(images/participation.png);
+
+  background-repeat: no-repeat;
+
+  width: 24px;
+
+  height: 24px;
+
+  position: absolute;
+
+  margin-top: -2px;
+
+  margin-left: -30px;
+
+}
+
+div.challenge_top_10_users {
+
+  height: 435px;
+
+}
+
+span.challenge_analytics_countdown, .challenge_analytics_countdown_for_view {
+
+  color: #fd0000;
+
+  font-weight: 600;
+
+}
+
+label.vc_add_marks_label {
+
+  margin-right: 10px;
+
+}
+
+.vc_show_marks_label p {
+
+  margin: 5px;
+
+  font-size: 15px;
+
+}
+
+img#clock {
+
+  height: 18px;
+
+  width: 18px;
+
+  margin-right: 5px;
+
+  margin-top: -2px;
+
+}
+
+.challenge-subscribe-and-participation-rate-cover.challenge-subscribe-and-participation-rate-cover_particular_and_unique {
+
+  width: 100% !important;
+
+}
+
+select.post_filter_post_child {
+
+  width: 100% !important;
+
+}
+
+.vgen_challenge-participator-marks-shortcode {
+
+  text-align: center;
+
+  margin-bottom: 30px;
+
+  color: #707070;
+
+  font-size: 14px;
+
+}
+
+.vgen_challenge-participator-marks-shortcode span {
+
+  color: #020202;
+
+  font-size: 15px;
+
+}
+
+table.vgen-challenge-data-table tr th {
+
+  width: 20%;
+
+}
+
+.download-user-data-challenge-cover, .vc-ac-cb-div {
+
+  width: 100%;
+
+  margin-top: 20px;
+
+  max-height: 370px;
+
+  overflow-y: scroll;
+
+  overflow-x: hidden;
+
+  padding: 10px;
+
+  background: #fafafa;
+
+}
+
+.download-challenge-user-subscriptions-and-participation-button-cover {
+
+  width: 100%;
+
+  overflow: hidden;
+
+}
+
+.download-challenge-user-subscriptions-button, .download-challenge-user-participation-button {
+
+  padding: 15px 5px;
+
+  font-family: "nunito sans", Sans-serif;
+
+  line-height: 15px;
+
+  border: none;
+
+  cursor: pointer;
+
+  background: #CA265F;
+
+  border-color: #CA265F;
+
+  color: #FFFFFF;
+
+  font-size: 16px;
+
+  font-weight: 400;
+
+  border-radius: 10px;
+
+  text-align: center;
+
+  width: 49%;
+
+  margin: 0px .5%;
+
+  float: left;
+
+}
+
+.download-challenge-user-subscriptions-button.active, .download-challenge-user-participation-button.active  {
+
+  background: #242254 !important;
+
+  border-color: #242254 !important;
+
+}
+
+.modal_download_challenge_user_subscriptions_data, .modal_download_challenge_user_participation_data {
+
+  display: none;
+
+}
+
+.modal_download_challenge_user_subscriptions_data.active, .modal_download_challenge_user_participation_data.active {
+
+  display: block;
+
+}
+
+@media only screen and (max-width: 480px){
+
+  .vgen-challenge-submenu {
+
+    margin: 30px 5px;
+
+  }
+
+  .vgen_challenge-data-admin-icon {
+
+    float: unset !important;
+
+    margin: 40px 30px !important;
+
+  } 
+
+  .vgen_challenge-data-andsubscriptions {
+
+      width: 100% !important;
+
+  }
+
+  h1#challenge_subscriptions_button {
+
+    float: unset;
+
+    margin: 0px;
+
+  }
+
+  .vgen_challenge-data-admin-icon {
+
+    float: right;
+
+    margin: 20px 30px;
+
+  }
+
+  .challenge-subscribe-and-participation-rate-cover {
+
+    float: unset !important;
+
+    width: 100% !important;
+
+    box-shadow: unset !important;
+
+  }
+
+  input[type="search"] {
+
+    margin-bottom: 15px;
+
+  }
+
+  .table-responsive {
+
+    width: 100%;
+
+    padding: 15px;
+
+  }
+
+}
+
+.user_subscriptions_mail_cover {
+
+  display: none;
+
+}
+
+/* div#adminmenuback {
+
+  display: none;
+
+} */
+
