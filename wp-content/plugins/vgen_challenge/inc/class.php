@@ -432,7 +432,7 @@ if (!class_exists('vgen_challengeClass')) {
                     'is_analytics_page' => $is_analytics_page,
                 )
             );
-        }    
+        }
 
         /*
         * Appointment frontend Script
@@ -3598,6 +3598,14 @@ if (!class_exists('vgen_challengeClass')) {
                             </div>
 
                             <div class="accordion" id="accordionExample">
+                                <h2 class="accordion-header" id="heading_main">
+                                    <button class="accordion-button vgen_single_challenge_data" " type="button" data-bs-toggle="collapse" data-bs-target="#collapse_main" aria-controls="collapse_main">
+                                        Test
+                                    </button>
+                                </h2>
+                                <div id="collapse_main" class="accordion-collapse collapse" aria-labelledby="heading_main" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                
                             <?php
 
                                 $wp_post_filter_choose_first_category = array();
@@ -3680,6 +3688,7 @@ if (!class_exists('vgen_challengeClass')) {
                                     array_push( $all_vgen_challenge_ids, $post_id );
                                 }
                                 $i = 0;
+                                
                                 foreach( $all_vgen_challenge_ids as $single ){
 
 
@@ -4163,6 +4172,8 @@ if (!class_exists('vgen_challengeClass')) {
                                 $i++;
                                 }
                             ?>
+                                </div>
+                                </div>
                             </div>
 
                         </div>
