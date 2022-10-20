@@ -1,3 +1,4 @@
+
 <?php
 /*
 * vgen_challenge Class 
@@ -3592,18 +3593,18 @@ if (!class_exists('vgen_challengeClass')) {
                                 <!-- challenge subscriber and participation rate start -->
                                 <div class="challenge-subscribe-and-participation-rate-cover-all">
                                     <h2><?php _e('Active Challenge Subscriptions and Participation Rate', 'vgen_challenge'); ?></h2>
-                                    <div id="active_challenge_subscribe_and_participation_rate"></div>
+                                    
                                 </div>
                                 <!-- challenge subscriber and participation rate end -->
                             </div>
 
-                            <div class="accordion" id="accordionExample">
+                            <div class="accordion" id="accordionExample_mainTest">
                                 <h2 class="accordion-header" id="heading_main">
-                                    <button class="accordion-button vgen_single_challenge_data" " type="button" data-bs-toggle="collapse" data-bs-target="#collapse_main" aria-controls="collapse_main">
-                                        Test
+                                    <button class="css-button-arrow--sky"  type="button" data-bs-toggle="collapse" data-bs-target="#collapse_main" aria-controls="collapse_main">
+                                        Click to expande the challenge list
                                     </button>
                                 </h2>
-                                <div id="collapse_main" class="accordion-collapse collapse" aria-labelledby="heading_main" data-bs-parent="#accordionExample">
+                                <div id="collapse_main" class="accordion-collapse collapse" aria-labelledby="heading_main" data-bs-parent="#accordionExample_mainTest">
                                     <div class="accordion-body">
                                 
                             <?php
@@ -3754,8 +3755,244 @@ if (!class_exists('vgen_challengeClass')) {
                                             </button>
                                         </h2>
                                         <div id="collapse<?php echo $i; ?>" class="accordion-collapse collapse <?php echo $class_collapse_show; ?>" aria-labelledby="heading<?php echo $i; ?>" data-bs-parent="#accordionExample">
-                                            <div class="accordion-body">
+                                            <div class="accordion-body insideaccordin">
                                                 <div class="vgen_challenge-data-andsubscriptions-cover">
+                                                    <div class="header_for_challenge">
+                                                <div class="challenge_total_subscriptions"><h2>Total Subscriptions: <span class="challenge_analytics_countdown_for_view"><?php echo $query_subscriptions_active->challenge_subscribe; ?></span></h2></div>
+                                                            <div class="challenge_total_participation"><h2>Total Participation: <span class="challenge_analytics_countdown_for_view"><?php echo $query_participation_active->challenge_participation; ?></span></h2>
+                                                </div>
+                                                        <div class="challenge_total_subscriptions">
+                                                        <h2>Time status: <span><?php echo $post_stat_number . ' '. $post_stat_label; ?></span></h2>
+                                                        </div>
+                                                </div>
+                                                   
+                                                </div>
+                                                <?php 
+                                                
+                                                    $particular_page_views = 0;
+                                                    $unique_page_views = 0;
+                                                    //$time_on_that_page = 0;
+                                                    if( !empty( get_post_meta( $post_id, 'particular_page_views', true ) ) ){
+                                                        $particular_page_views = get_post_meta( $post_id, 'particular_page_views', true );
+                                                    }
+                                                    if( !empty( get_post_meta( $post_id, 'unique_page_views', true ) ) ){
+                                                        $unique_page_views = get_post_meta( $post_id, 'unique_page_views', true );
+                                                    }
+                                                    // if( !empty( get_post_meta( $post_id, 'time_on_that_page', true ) ) ){
+                                                    //     $time_on_that_page = get_post_meta( $post_id, 'time_on_that_page', true );
+                                                    // }
+
+                                                    // $time_on_that_pages_min = $time_on_that_page/60;
+                                                    // $time_on_that_pages_hou = $time_on_that_pages_min/60;
+                                                    // $time_on_that_pages = number_format($time_on_that_pages_hou, 2);
+
+                                                    // $average_time_on_that_page = $time_on_that_pages_min / $particular_page_views;
+                                                    // $average_time_on_that_pages = number_format($average_time_on_that_page, 2);
+
+                                                    $table_subscriptions = $this->user_subscriptions_database;
+                                                    $table_database = $this->user_participation_database;
+                                                    $query_subscriptions_active = $this->wpdb->get_row( "SELECT COUNT(*) AS `challenge_subscribe` FROM $table_subscriptions  WHERE `post_id` = '$post_id'" );
+                                                    $query_participation_active = $this->wpdb->get_row( "SELECT COUNT(*) AS `challenge_participation` FROM $table_database WHERE `post_id` = '$post_id'" );
+
+                                                ?>
+                                                <div class="analytics-cover">
+
+                                                    <!-- single challenge particular and unique page views rate start -->
+                                                    <div class="challenge-subscribe-and-participation-rate-cover challenge-subscribe-and-participation-rate-cover_particular_and_unique">
+                                                        <h2 class="challenge-subscribe-and-participation-title<?php echo $i; ?>"><?php _e( 'Analytics Subscriptions and Participation Rate', 'vgen_challenge'); ?></h2>
+                                                        <div class="challenge_subscribe_and_participation_rate_par_challenge" id="challenge_subscribe_and_participation_rate_par_challenge<?php echo $post_id; ?>"></div>
+                                                        <div class="challenge_particular_and_unique_page_views_cover">
+                                                            <div class="challenge_total_subscriptions"><p>Total Subscriptions: <span class="challenge_analytics_countdown_for_view"><?php echo $query_subscriptions_active->challenge_subscribe; ?></span></p></div>
+                                                            <div class="challenge_total_participation"><p>Total Participation: <span class="challenge_analytics_countdown_for_view"><?php echo $query_participation_active->challenge_participation; ?></span></p></div>
+                                                        </div>
+                                                        
+                                                        <?php
+                                                            $stop = 'off';
+                                                            if( $stop == 'no' ){ 
+                                                        ?>
+                                                        <div class="challenge_average_and_time_on_that_page_cover">
+                                                            <div class="challenge_time_on_that_page_views"><p>Viewing Time: <span class="challenge_analytics_countdown"><?php echo $time_on_that_pages; ?></span> Hours</p></div>
+                                                            <div class="challenge_average_time_on_that_page_views"><p>Average Viewing Time: <span class="challenge_analytics_countdown"><?php echo $average_time_on_that_pages; ?></span> Minute</p></div>
+                                                        </div>
+                                                        <?php } ?>
+                                                    </div>
+                                                    <!-- single challenge particular and unique page views rate end -->
+                                                    
+                                                    <?php  $off = 0;
+                                                    if( $off == 1 ){ ?>
+                                                    <!-- single challenge time on that page start -->
+                                                    <div class="challenge-subscribe-and-participation-rate-cover">
+                                                        <h2 class="challenge-subscribe-and-participation-title<?php echo $i; ?>"><?php _e( 'Analytics Time On that Page', 'vgen_challenge'); ?></h2>
+                                                        <div class="challenge_time_on_that_page_par_challenge" id="challenge_time_on_that_page_par_challenge<?php echo $post_id; ?>"></div>
+                                                    </div>
+                                                    <!-- single challenge time on that page end -->
+                                                    <?php } ?>
+                                                    <!-- single challenge subscriber and participation rate start -->
+                                                    <div class="challenge-subscribe-and-participation-rate-cover">
+                                                        <h2 class="challenge-subscribe-and-participation-title<?php echo $i; ?>"><?php _e( ' Analytics Particular and Unique Page Views ', 'vgen_challenge'); ?></h2>
+                                                        <div class="challenge_particular_and_unique_page_views_par_challenge" id="challenge_particular_and_unique_page_views_par_challenge<?php echo $post_id; ?>"></div>
+                                                        <div class="challenge_particular_and_unique_page_views_cover">
+                                                            <div class="challenge_particular_page_views"><p>Particular Page: <span class="challenge_analytics_countdown_for_view"><?php echo $particular_page_views; ?></span> Views</p></div>
+                                                            <div class="challenge_unique_page_views"><p>Unique Page: <span class="challenge_analytics_countdown_for_view"><?php echo $unique_page_views; ?></span> Views</p></div>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    <!-- single challenge subscriber and participation rate end -->
+                                                    
+                                                    <!-- single challenge top 10 user start -->
+                                                    <div class="challenge-subscribe-and-participation-rate-cover">
+                                                        <h2><?php _e('Top 5 Users', 'vgen_challenge'); ?></h2>
+                                                        <div class="challenge_top_10_users" id="challenge_top_10_users<?php echo $post_id; ?>"></div>
+                                                        <div class="challenge_particular_and_unique_page_views_cover">
+                                                        </div>
+                                                    </div>
+                                                    <!-- single challenge top 10 user rate end -->
+                                                </div>
+                                                
+                                                <!-- vgen challenge marking system start -->
+                                                <div class="table-responsive">
+
+                                                    <table class="table vgen_challenge-table jquerydatatable">
+                                                        <thead>
+                                                            <tr class="vgen_challenge-heading-wrapper">
+                                                                <th><?php _e('Number', 'vgen_challenge'); ?></th>
+                                                                <th><?php _e('User Name', 'vgen_challenge'); ?></th>
+                                                                <th><?php _e('Submit Id', 'vgen_challenge'); ?></th>
+                                                                <th><?php _e('Insert Time', 'vgen_challenge'); ?></th>
+                                                                <th><?php _e('Answer Format', 'vgen_challenge'); ?></th>
+                                                                <th><?php _e('Answer Link', 'vgen_challenge'); ?></th>
+                                                                <th><?php _e('Marks', 'vgen_challenge'); ?></th>
+                                                                <th><?php _e('Action', 'vgen_challenge'); ?></th>
+                                                            </tr>
+                                                        </thead>
+                                                        <?php
+                                                        
+                                                            $marks_first_like_creativity = 'Creativity';
+                                                            if ( get_option( 'marks_first_like_creativity' ) !== false ) {
+                                                                $marks_first_like_creativity = get_option( 'marks_first_like_creativity');
+                                                            }
+                                                            $marks_second_like_innovation = 'Innovation';
+                                                            if ( get_option( 'marks_second_like_innovation' ) !== false ) {
+                                                                $marks_second_like_innovation = get_option( 'marks_second_like_innovation');
+                                                            }
+                                                            $marks_third_like_invention = 'Invention';
+                                                            if ( get_option( 'marks_third_like_invention' ) !== false ) {
+                                                                $marks_third_like_invention = get_option( 'marks_third_like_invention');
+                                                            }
+
+                                                            $table_name = $this->user_participation_database;
+                                                            $qry = $this->wpdb->get_results( "SELECT * FROM $table_name ssn WHERE `post_id` = $post_id ORDER BY ssn.`insert_time` DESC", OBJECT);
+                                                            $all_files = json_decode(json_encode($qry), true);
+                                                        ?>
+                                                        <tbody>
+                                                            <?php
+                                                            $j = 1;
+                                                            foreach ($all_files as $single_file){
+                                                                $challenge_title = get_the_title( $single_file['post_id'] );
+                                                                $user_id = $single_file['user_id'];
+                                                                $user_info = get_userdata( $user_id );
+                                                                $user_name = $user_info->display_name;
+                                                                $user_email = $user_info->user_email;
+
+                                                                $uploaded_type = $single_file['uploaded_type'];
+                                                                $uploaded_type_values = $uploaded_type;
+                                                                // if( $uploaded_type == 'contact_form_7' ){
+                                                                //     $uploaded_type_values = 'CF7 ZIP';
+                                                                // }elseif( $uploaded_type == 'submit_url' ){
+                                                                //     $uploaded_type_values = 'Drive URL';
+                                                                // }elseif( $uploaded_type == '.zip' ){
+                                                                //     $uploaded_type_values = 'ZIP';
+                                                                // }elseif( $uploaded_type == '.pdf' ){
+                                                                //     $uploaded_type_values = 'PDF';
+                                                                // }
+                                                                $uploaded_url = $single_file['uploaded_url'];
+                                                                ?>
+                                                                <tr class="tr-vgen-user-marks">
+                                                                    <td><?php echo $j++; ?></td>
+                                                                    <td><?php echo $user_name; ?></td>
+                                                                    <td><?php echo $single_file['uploaded_nonce']; ?></td>
+                                                                    <td class="vgen-date"><?php echo $single_file['insert_time']; ?></td>
+                                                                    <td><?php echo $uploaded_type_values; ?></td>
+                                                                    <?php 
+                                                                    if( $uploaded_type_values == 'submit_url' ){
+                                                                    ?>
+                                                                    <td><a class="vgen_uploaded_url" href="<?php echo $uploaded_url; ?>" target="_blank">See the Answer</a></td>
+                                                                    <?php 
+                                                                    }else{
+                                                                    ?>
+                                                                    <td>Your answer has been sent via Mail.</td>
+                                                                    <?php
+                                                                    }
+                                                                    ?>
+                                                                    <td>
+                                                                        <div class="vc_show_marks_label">
+                                                                            <p><?php echo $marks_first_like_creativity . ': '; ?><span class="vgen-user-marks-creativity<?php echo $single_file['id']; ?>"><?php echo $single_file['user_creativity_marks']; ?></span></p>
+                                                                        </div>
+                                                                        <div class="vc_show_marks_label">
+                                                                            <p><?php echo $marks_second_like_innovation . ': '; ?><span class="vgen-user-marks-innovation<?php echo $single_file['id']; ?>"><?php echo $single_file['user_innovation_marks']; ?></span></p>
+                                                                        </div>
+                                                                        <div class="vc_show_marks_label">
+                                                                            <p><?php echo $marks_third_like_invention . ': '; ?><span class="vgen-user-marks-invention<?php echo $single_file['id']; ?>"><?php echo $single_file['user_invention_marks']; ?></span></p>
+                                                                        </div>
+                                                                    </td>
+                                                                    
+                                                                    <td>
+                                                                        <div class="np-edit add_marks" ><?php _e('Add Marks', 'vgen_challenge'); ?></div>
+                                                                        <div class="modal-overlay">
+                                                                            <div class="modal">
+                                                                                <a class="close-modal">
+                                                                                <svg viewBox="0 0 20 20">
+                                                                                    <path fill="#000000" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path>
+                                                                                </svg>
+                                                                                </a>
+                                                                                <div class="modal-content">
+                                                                                    <div class="challenge-submit-id">Challenge Submit Id: <span><?php echo $single_file['uploaded_nonce']; ?></span></div>
+                                                                                    <div class="challenge-name">Challenge Name: <span><?php echo get_the_title($single); ?></span></div>
+                                                                                    <?php
+                                                                                    if ( $role == 'administrator' OR $role == 'um_company' ){
+                                                                                    ?>
+                                                                                    <div class="challenge-author-name">Challenge Author Name: <span><?php echo $post_author_name; ?></span></div>
+                                                                                    <?php
+                                                                                    }
+                                                                                    ?>
+                                                                                    <div class="challenge-except-user-name">Challenge Except User Name: <span><?php echo $user_name; ?></span></div>
+                                                                                    <div class="challenge-except-user-name">Challenge Except User Mail: <span><?php echo $user_email; ?></span></div>
+                                                                                    <div class="challenge-except-time">Challenge Except Time: <span><?php echo $single_file['insert_time']; ?></span></div>
+                                                                                    <div class="challenge-except-user-name">User Answer Format: <span><?php echo $uploaded_type_values; ?></span></div>
+                                                                                    <div class="challenge-except-user-name">User Answer Link: <span>
+                                                                                        <?php 
+                                                                                        if( $uploaded_type_values == 'submit_url' ){
+                                                                                        ?>
+                                                                                        <a class="vgen_uploaded_url" href="<?php echo $uploaded_url; ?>" target="_blank">See the Answer</a>
+                                                                                        <?php 
+                                                                                        }else{
+                                                                                        ?>Your answer has been sent via Mail.<?php
+                                                                                        }
+                                                                                        ?>
+                                                                                        </span></div>
+                                                                                    <div class="vc_add_marks_cover">
+                                                                                        <input type="hidden" name="file_id" class="file_id" value="<?php echo $single_file['id']; ?>" />
+                                                                                        <label class="vc_add_marks_label"><?php echo $marks_first_like_creativity . ': '; ?><input type="number" min="1" max="10" name="vc_add_marks_creativity" class="vc_add_marks_creativity" value="<?php echo $single_file['user_creativity_marks']; ?>"/></label>
+                                                                                        <label class="vc_add_marks_label"><?php echo $marks_second_like_innovation . ': '; ?><input type="number" min="1" max="10" name="vc_add_marks_innovation" class="vc_add_marks_innovation" value="<?php echo $single_file['user_innovation_marks']; ?>"/></label>
+                                                                                        <label class="vc_add_marks_label"><?php echo $marks_third_like_invention . ': '; ?><input type="number" min="1" max="10" name="vc_add_marks_invention" class="vc_add_marks_invention" value="<?php echo $single_file['user_invention_marks']; ?>"/></label>
+                                                                                        <div class="update-marks" value="update" name="status">Update</div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            <?php
+                                                            }
+                                                            ?>
+                                                        </tbody>
+                                                    </table>
+
+                                                </div>
+                                                <!-- vgen challenge marking system end -->
+                                                
+                                                <div class="analytics-cover">
+                                                    <div class="vgen_challenge-participator-marks-shortcode">Participator Marks Shortcode: <span><?php echo '[vgen-challenge-participate-list challenge-id="' . $post_id . '"]'; ?></span></div>
                                                     <div class="vgen_challenge-data-andsubscriptions">
                                                         <h1 id="challenge_subscriptions_button" class="challenge_subscriptions_button">Subscriptions Mail</h1>
                                                         <div class="modal-overlay">
@@ -3938,231 +4175,7 @@ if (!class_exists('vgen_challengeClass')) {
                                                             </div>
                                                         </form>
                                                     </div>
-                                                </div>
-                                                <?php 
-                                                
-                                                    $particular_page_views = 0;
-                                                    $unique_page_views = 0;
-                                                    //$time_on_that_page = 0;
-                                                    if( !empty( get_post_meta( $post_id, 'particular_page_views', true ) ) ){
-                                                        $particular_page_views = get_post_meta( $post_id, 'particular_page_views', true );
-                                                    }
-                                                    if( !empty( get_post_meta( $post_id, 'unique_page_views', true ) ) ){
-                                                        $unique_page_views = get_post_meta( $post_id, 'unique_page_views', true );
-                                                    }
-                                                    // if( !empty( get_post_meta( $post_id, 'time_on_that_page', true ) ) ){
-                                                    //     $time_on_that_page = get_post_meta( $post_id, 'time_on_that_page', true );
-                                                    // }
 
-                                                    // $time_on_that_pages_min = $time_on_that_page/60;
-                                                    // $time_on_that_pages_hou = $time_on_that_pages_min/60;
-                                                    // $time_on_that_pages = number_format($time_on_that_pages_hou, 2);
-
-                                                    // $average_time_on_that_page = $time_on_that_pages_min / $particular_page_views;
-                                                    // $average_time_on_that_pages = number_format($average_time_on_that_page, 2);
-
-                                                    $table_subscriptions = $this->user_subscriptions_database;
-                                                    $table_database = $this->user_participation_database;
-                                                    $query_subscriptions_active = $this->wpdb->get_row( "SELECT COUNT(*) AS `challenge_subscribe` FROM $table_subscriptions  WHERE `post_id` = '$post_id'" );
-                                                    $query_participation_active = $this->wpdb->get_row( "SELECT COUNT(*) AS `challenge_participation` FROM $table_database WHERE `post_id` = '$post_id'" );
-
-                                                ?>
-                                                <div class="analytics-cover">
-
-                                                    <!-- single challenge particular and unique page views rate start -->
-                                                    <div class="challenge-subscribe-and-participation-rate-cover challenge-subscribe-and-participation-rate-cover_particular_and_unique">
-                                                        <h2 class="challenge-subscribe-and-participation-title<?php echo $i; ?>"><?php _e( 'Analytics Particular and Unique Page Views', 'vgen_challenge'); ?></h2>
-                                                        <div class="challenge_particular_and_unique_page_views_par_challenge" id="challenge_particular_and_unique_page_views_par_challenge<?php echo $post_id; ?>"></div>
-                                                        <div class="challenge_particular_and_unique_page_views_cover">
-                                                            <div class="challenge_particular_page_views"><p>Particular Page: <span class="challenge_analytics_countdown_for_view"><?php echo $particular_page_views; ?></span> Views</p></div>
-                                                            <div class="challenge_unique_page_views"><p>Unique Page: <span class="challenge_analytics_countdown_for_view"><?php echo $unique_page_views; ?></span> Views</p></div>
-                                                        </div>
-                                                        <?php
-                                                            $stop = 'off';
-                                                            if( $stop == 'no' ){ 
-                                                        ?>
-                                                        <div class="challenge_average_and_time_on_that_page_cover">
-                                                            <div class="challenge_time_on_that_page_views"><p>Viewing Time: <span class="challenge_analytics_countdown"><?php echo $time_on_that_pages; ?></span> Hours</p></div>
-                                                            <div class="challenge_average_time_on_that_page_views"><p>Average Viewing Time: <span class="challenge_analytics_countdown"><?php echo $average_time_on_that_pages; ?></span> Minute</p></div>
-                                                        </div>
-                                                        <?php } ?>
-                                                    </div>
-                                                    <!-- single challenge particular and unique page views rate end -->
-                                                    
-                                                    <?php  $off = 0;
-                                                    if( $off == 1 ){ ?>
-                                                    <!-- single challenge time on that page start -->
-                                                    <div class="challenge-subscribe-and-participation-rate-cover">
-                                                        <h2 class="challenge-subscribe-and-participation-title<?php echo $i; ?>"><?php _e( 'Analytics Time On that Page', 'vgen_challenge'); ?></h2>
-                                                        <div class="challenge_time_on_that_page_par_challenge" id="challenge_time_on_that_page_par_challenge<?php echo $post_id; ?>"></div>
-                                                    </div>
-                                                    <!-- single challenge time on that page end -->
-                                                    <?php } ?>
-                                                    <!-- single challenge subscriber and participation rate start -->
-                                                    <div class="challenge-subscribe-and-participation-rate-cover">
-                                                        <h2 class="challenge-subscribe-and-participation-title<?php echo $i; ?>"><?php _e( 'Analytics Subscriptions and Participation Rate', 'vgen_challenge'); ?></h2>
-                                                        <div class="challenge_subscribe_and_participation_rate_par_challenge" id="challenge_subscribe_and_participation_rate_par_challenge<?php echo $post_id; ?>"></div>
-                                                        <div class="challenge_particular_and_unique_page_views_cover">
-                                                            <div class="challenge_total_subscriptions"><p>Total Subscriptions: <span class="challenge_analytics_countdown_for_view"><?php echo $query_subscriptions_active->challenge_subscribe; ?></span></p></div>
-                                                            <div class="challenge_total_participation"><p>Total Participation: <span class="challenge_analytics_countdown_for_view"><?php echo $query_participation_active->challenge_participation; ?></span></p></div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- single challenge subscriber and participation rate end -->
-                                                    
-                                                    <!-- single challenge top 10 user start -->
-                                                    <div class="challenge-subscribe-and-participation-rate-cover">
-                                                        <h2><?php _e('Top 5 Users', 'vgen_challenge'); ?></h2>
-                                                        <div class="challenge_top_10_users" id="challenge_top_10_users<?php echo $post_id; ?>"></div>
-                                                        <div class="challenge_particular_and_unique_page_views_cover">
-                                                        </div>
-                                                    </div>
-                                                    <!-- single challenge top 10 user rate end -->
-                                                </div>
-                                                
-                                                <!-- vgen challenge marking system start -->
-                                                <div class="table-responsive">
-
-                                                    <table class="table vgen_challenge-table jquerydatatable">
-                                                        <thead>
-                                                            <tr class="vgen_challenge-heading-wrapper">
-                                                                <th><?php _e('Number', 'vgen_challenge'); ?></th>
-                                                                <th><?php _e('User Name', 'vgen_challenge'); ?></th>
-                                                                <th><?php _e('Submit Id', 'vgen_challenge'); ?></th>
-                                                                <th><?php _e('Insert Time', 'vgen_challenge'); ?></th>
-                                                                <th><?php _e('Answer Format', 'vgen_challenge'); ?></th>
-                                                                <th><?php _e('Answer Link', 'vgen_challenge'); ?></th>
-                                                                <th><?php _e('Marks', 'vgen_challenge'); ?></th>
-                                                                <th><?php _e('Action', 'vgen_challenge'); ?></th>
-                                                            </tr>
-                                                        </thead>
-                                                        <?php
-                                                        
-                                                            $marks_first_like_creativity = 'Creativity';
-                                                            if ( get_option( 'marks_first_like_creativity' ) !== false ) {
-                                                                $marks_first_like_creativity = get_option( 'marks_first_like_creativity');
-                                                            }
-                                                            $marks_second_like_innovation = 'Innovation';
-                                                            if ( get_option( 'marks_second_like_innovation' ) !== false ) {
-                                                                $marks_second_like_innovation = get_option( 'marks_second_like_innovation');
-                                                            }
-                                                            $marks_third_like_invention = 'Invention';
-                                                            if ( get_option( 'marks_third_like_invention' ) !== false ) {
-                                                                $marks_third_like_invention = get_option( 'marks_third_like_invention');
-                                                            }
-
-                                                            $table_name = $this->user_participation_database;
-                                                            $qry = $this->wpdb->get_results( "SELECT * FROM $table_name ssn WHERE `post_id` = $post_id ORDER BY ssn.`insert_time` DESC", OBJECT);
-                                                            $all_files = json_decode(json_encode($qry), true);
-                                                        ?>
-                                                        <tbody>
-                                                            <?php
-                                                            $j = 1;
-                                                            foreach ($all_files as $single_file){
-                                                                $challenge_title = get_the_title( $single_file['post_id'] );
-                                                                $user_id = $single_file['user_id'];
-                                                                $user_info = get_userdata( $user_id );
-                                                                $user_name = $user_info->display_name;
-                                                                $user_email = $user_info->user_email;
-
-                                                                $uploaded_type = $single_file['uploaded_type'];
-                                                                $uploaded_type_values = $uploaded_type;
-                                                                // if( $uploaded_type == 'contact_form_7' ){
-                                                                //     $uploaded_type_values = 'CF7 ZIP';
-                                                                // }elseif( $uploaded_type == 'submit_url' ){
-                                                                //     $uploaded_type_values = 'Drive URL';
-                                                                // }elseif( $uploaded_type == '.zip' ){
-                                                                //     $uploaded_type_values = 'ZIP';
-                                                                // }elseif( $uploaded_type == '.pdf' ){
-                                                                //     $uploaded_type_values = 'PDF';
-                                                                // }
-                                                                $uploaded_url = $single_file['uploaded_url'];
-                                                                ?>
-                                                                <tr class="tr-vgen-user-marks">
-                                                                    <td><?php echo $j++; ?></td>
-                                                                    <td><?php echo $user_name; ?></td>
-                                                                    <td><?php echo $single_file['uploaded_nonce']; ?></td>
-                                                                    <td class="vgen-date"><?php echo $single_file['insert_time']; ?></td>
-                                                                    <td><?php echo $uploaded_type_values; ?></td>
-                                                                    <?php 
-                                                                    if( $uploaded_type_values == 'submit_url' ){
-                                                                    ?>
-                                                                    <td><a class="vgen_uploaded_url" href="<?php echo $uploaded_url; ?>" target="_blank">See the Answer</a></td>
-                                                                    <?php 
-                                                                    }else{
-                                                                    ?>
-                                                                    <td>Your answer has been sent via Mail.</td>
-                                                                    <?php
-                                                                    }
-                                                                    ?>
-                                                                    <td>
-                                                                        <div class="vc_show_marks_label">
-                                                                            <p><?php echo $marks_first_like_creativity . ': '; ?><span class="vgen-user-marks-creativity<?php echo $single_file['id']; ?>"><?php echo $single_file['user_creativity_marks']; ?></span></p>
-                                                                        </div>
-                                                                        <div class="vc_show_marks_label">
-                                                                            <p><?php echo $marks_second_like_innovation . ': '; ?><span class="vgen-user-marks-innovation<?php echo $single_file['id']; ?>"><?php echo $single_file['user_innovation_marks']; ?></span></p>
-                                                                        </div>
-                                                                        <div class="vc_show_marks_label">
-                                                                            <p><?php echo $marks_third_like_invention . ': '; ?><span class="vgen-user-marks-invention<?php echo $single_file['id']; ?>"><?php echo $single_file['user_invention_marks']; ?></span></p>
-                                                                        </div>
-                                                                    </td>
-                                                                    
-                                                                    <td>
-                                                                        <div class="np-edit add_marks" ><?php _e('Add Marks', 'vgen_challenge'); ?></div>
-                                                                        <div class="modal-overlay">
-                                                                            <div class="modal">
-                                                                                <a class="close-modal">
-                                                                                <svg viewBox="0 0 20 20">
-                                                                                    <path fill="#000000" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path>
-                                                                                </svg>
-                                                                                </a>
-                                                                                <div class="modal-content">
-                                                                                    <div class="challenge-submit-id">Challenge Submit Id: <span><?php echo $single_file['uploaded_nonce']; ?></span></div>
-                                                                                    <div class="challenge-name">Challenge Name: <span><?php echo get_the_title($single); ?></span></div>
-                                                                                    <?php
-                                                                                    if ( $role == 'administrator' OR $role == 'um_company' ){
-                                                                                    ?>
-                                                                                    <div class="challenge-author-name">Challenge Author Name: <span><?php echo $post_author_name; ?></span></div>
-                                                                                    <?php
-                                                                                    }
-                                                                                    ?>
-                                                                                    <div class="challenge-except-user-name">Challenge Except User Name: <span><?php echo $user_name; ?></span></div>
-                                                                                    <div class="challenge-except-user-name">Challenge Except User Mail: <span><?php echo $user_email; ?></span></div>
-                                                                                    <div class="challenge-except-time">Challenge Except Time: <span><?php echo $single_file['insert_time']; ?></span></div>
-                                                                                    <div class="challenge-except-user-name">User Answer Format: <span><?php echo $uploaded_type_values; ?></span></div>
-                                                                                    <div class="challenge-except-user-name">User Answer Link: <span>
-                                                                                        <?php 
-                                                                                        if( $uploaded_type_values == 'submit_url' ){
-                                                                                        ?>
-                                                                                        <a class="vgen_uploaded_url" href="<?php echo $uploaded_url; ?>" target="_blank">See the Answer</a>
-                                                                                        <?php 
-                                                                                        }else{
-                                                                                        ?>Your answer has been sent via Mail.<?php
-                                                                                        }
-                                                                                        ?>
-                                                                                        </span></div>
-                                                                                    <div class="vc_add_marks_cover">
-                                                                                        <input type="hidden" name="file_id" class="file_id" value="<?php echo $single_file['id']; ?>" />
-                                                                                        <label class="vc_add_marks_label"><?php echo $marks_first_like_creativity . ': '; ?><input type="number" min="1" max="10" name="vc_add_marks_creativity" class="vc_add_marks_creativity" value="<?php echo $single_file['user_creativity_marks']; ?>"/></label>
-                                                                                        <label class="vc_add_marks_label"><?php echo $marks_second_like_innovation . ': '; ?><input type="number" min="1" max="10" name="vc_add_marks_innovation" class="vc_add_marks_innovation" value="<?php echo $single_file['user_innovation_marks']; ?>"/></label>
-                                                                                        <label class="vc_add_marks_label"><?php echo $marks_third_like_invention . ': '; ?><input type="number" min="1" max="10" name="vc_add_marks_invention" class="vc_add_marks_invention" value="<?php echo $single_file['user_invention_marks']; ?>"/></label>
-                                                                                        <div class="update-marks" value="update" name="status">Update</div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
-                                                            <?php
-                                                            }
-                                                            ?>
-                                                        </tbody>
-                                                    </table>
-
-                                                </div>
-                                                <!-- vgen challenge marking system end -->
-                                                
-                                                <div class="analytics-cover">
-                                                    <div class="vgen_challenge-participator-marks-shortcode">Participator Marks Shortcode: <span><?php echo '[vgen-challenge-participate-list challenge-id="' . $post_id . '"]'; ?></span></div>
                                                 </div>
                                             </div>
                                         </div>
